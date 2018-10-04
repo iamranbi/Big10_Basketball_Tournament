@@ -1,9 +1,6 @@
 import csv
 import sqlite3 as sqlite
 
-#### Part 1 ####
-print('\n*********** PART 1 ***********')
-
 # Creates a database called big10.sqlite
 def create_tournament_db():
     try:
@@ -57,7 +54,6 @@ def create_tournament_db():
 
 # Populates big10.sqlite database using csv files
 def populate_tournament_db():
-    # Connect to big10 database
     conn = sqlite.connect('big10.sqlite')
     cur = conn.cursor()
     #import data teams.csv
@@ -101,6 +97,4 @@ def populate_tournament_db():
 
 if __name__ == "__main__":
     create_tournament_db()
-    print("Created big10 Database")
     populate_tournament_db()
-    print("Populated big10 Database")
